@@ -1,0 +1,111 @@
+// Grid
+.container {
+  width: 100%;
+  padding: 0 30px;
+  margin: auto;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+}
+$grid-columns: 12;
+$grid-breakpoint-xs: 0;
+$grid-breakpoint-sm: 576px;
+$grid-breakpoint-md: 768px;
+$grid-breakpoint-lg: 992px;
+$grid-breakpoint-xl: 1200px;
+$grid-breakpoint-xxl: 1400px;
+
+@media (min-width: $grid-breakpoint-md) {
+  .container {
+    width: 720px;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+      width: calc(100 / $grid-columns) * $i * 1%;
+    }
+  }
+}
+@media (min-width: $grid-breakpoint-lg) {
+  .container {
+    width: 970px;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-lg-#{$i} {
+      width: calc(100 / $grid-columns) * $i * 1%;
+    }
+  }
+}
+
+@media (min-width: $grid-breakpoint-xl) {
+  .container {
+    width: 1140px;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-xl-#{$i} {
+      width: calc(100 / $grid-columns) * $i * 1%;
+    }
+  }
+}
+@media (min-width: $grid-breakpoint-xxl) {
+  .container {
+    width: 1320px;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-xxl-#{$i} {
+      width: calc(100 / $grid-columns) * $i * 1%;
+    }
+  }
+}
+
+// typography
+
+$headings: (h1, 40px, 48px, 700), (h2, 32px, 38px, 700), (h3, 28px, 32px, 600),
+  (h4, 24px, 28px, 500), (h5, 20px, 24px, 500), (h6, 16px, 22px, 400),
+  (P, 14px, 22px, 400);
+@each $title, $font_size, $line_height, $font_weight in $headings {
+  #{$title} {
+    font-size: $font_size;
+    line-height: $line_height;
+    font-weight: $font_weight;
+  }
+}
+$text_align: left, right, center, justify;
+@each $i in $text_align {
+  .text-#{$i} {
+    text-align: $i;
+  }
+}
+$case: lowercase, capitalize, uppercase;
+@each $case in $case {
+  .text-#{$case} {
+    text-transform: $case;
+  }
+}
+
+/* Margin & Padding */
+
+@for $i from 1 through 10 {
+  .pt-#{$i * 10} {
+    padding-top: $i * 10px;
+  }
+
+  .pb-#{$i * 10} {
+    padding-bottom: $i * 10px;
+  }
+
+  .mt-#{$i * 10} {
+    margin-top: $i * 10px;
+  }
+  .mb-#{$i * 10} {
+    margin-bottom: $i * 10px;
+  }
+}
+
+$list: left, center, right, justify;
+@each $i in $list {
+  .text-#{$i} {
+    text-align: $i;
+  }
+}
