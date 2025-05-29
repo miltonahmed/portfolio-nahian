@@ -92,3 +92,31 @@ a {
     }
   }
 }
+
+// section title
+.section-wrapper {
+  h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: $heading-text-color;
+    text-transform: capitalize;
+  }
+  h3 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 66.24px;
+    text-transform: capitalize;
+    margin-top: 15px;
+    color: $heading-text-color;
+  }
+
+  p {
+    max-width: 612px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24.96px;
+    margin-top: 22px;
+    color: $para-color;
+  }
+}
