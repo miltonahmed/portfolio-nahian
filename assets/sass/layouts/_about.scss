@@ -1,18 +1,33 @@
 #about {
   padding-top: 80px;
   padding-bottom: 120px;
+  background-color: $white-color;
   .about-content {
-    .section-wrapper {
-      h3 {
-        &.margin-top-bottom {
-          margin-top: 18px;
-          margin-bottom: 20px;
-        }
-      }
+    h5 {
+      font-size: 20px;
+      font-weight: 600;
+      color: $heading-text-color;
+      text-transform: capitalize;
+    }
+    h3 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 66.24px;
+      text-transform: capitalize;
+      color: $heading-text-color;
+    }
+
+    p {
+      max-width: 612px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24.96px;
+      color: $para-color;
     }
     .about-button {
-      &.btn-primary {
+      .btn-primary {
         padding: 12px 36px;
+        margin-top: 52px;
       }
     }
   }
