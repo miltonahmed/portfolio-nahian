@@ -62,7 +62,7 @@ a {
 
 // common button
 
-.btn-primary {
+.btn {
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -73,12 +73,22 @@ a {
   font-weight: 500;
   text-transform: capitalize;
 
-  &.btn {
+  &.btn-primary {
     padding: 12px 65.5px;
     background-color: $primary-color;
     &:hover {
       background-color: transparent;
       color: $primary-color;
+    }
+  }
+  &.btn-border {
+    padding: 11px 50.5px;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    &:hover {
+      background-color: $primary-color;
+      border: 1px solid $primary-color;
+      color: $white-color;
     }
   }
 }
